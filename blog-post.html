@@ -10,22 +10,22 @@
 </head>
 
 <body class="font-inter antialiased bg-white text-gray-900 tracking-tight">
-
     <!-- Page wrapper -->
     <div class="flex flex-col min-h-screen overflow-hidden">
-
         <!-- Site header -->
-        <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out" x-data="{ top: true }" @scroll.window="top = window.pageYOffset > 10 ? false : true" :class="{ 'bg-white backdrop-blur-sm shadow-lg' : !top }">
+        <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out" x-data="{ top: true }"
+            @scroll.window="top = window.pageYOffset > 10 ? false : true"
+            :class="{ 'bg-white backdrop-blur-sm shadow-lg' : !top }">
             <div class="max-w-6xl mx-auto px-5 sm:px-6">
                 <div class="flex items-center justify-between h-16 md:h-20">
-
                     <!-- Site branding -->
                     <div class="shrink-0 mr-4">
                         <!-- Logo -->
                         <a class="block" href="index.html" aria-label="Cruip">
                             <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
-                                    <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="header-logo">
+                                    <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%"
+                                        id="header-logo">
                                         <stop stop-color="#4FD1C5" offset="0%" />
                                         <stop stop-color="#81E6D9" offset="25.871%" />
                                         <stop stop-color="#338CF5" offset="100%" />
@@ -38,97 +38,27 @@
 
                     <!-- Desktop navigation -->
                     <nav class="hidden md:flex md:grow">
-
                         <!-- Desktop menu links -->
                         <ul class="flex grow justify-end flex-wrap items-center">
                             <li>
-                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                                    href="about.html">About us</a>
                             </li>
                             <li>
-                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out" href="about.html">About us</a>
-                            </li>
-                            <li>
-                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out" href="tutorials.html">Tutorials</a>
-                            </li>
-                            <li>
-                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out" href="blog.html">Blog</a>
-                            </li>
-                            <!-- 1st level: hover -->
-                            <li
-                                class="relative"
-                                x-data="{ open: false }"
-                                @mouseenter="open = true"
-                                @mouseleave="open = false"
-                            >
-                                <a
-                                    class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                                    href="#0"
-                                    aria-haspopup="true"
-                                    :aria-expanded="open"
-                                    @focus="open = true"
-                                    @focusout="open = false"
-                                    @click.prevent
-                                >
-                                    Resources
-                                    <svg class="w-3 h-3 fill-current text-gray-400 cursor-pointer ml-1 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z" />
-                                    </svg>
-                                </a>
-                                <!-- 2nd level: hover -->
-                                <ul
-                                    class="origin-top-right absolute top-full right-0 w-40 bg-white py-2 ml-4 rounded shadow-lg"
-                                    x-show="open"
-                                    x-transition:enter="transition ease-out duration-200 transform"
-                                    x-transition:enter-start="opacity-0 -translate-y-2"
-                                    x-transition:enter-end="opacity-100 translate-y-0"
-                                    x-transition:leave="transition ease-out duration-200"
-                                    x-transition:leave-start="opacity-100"
-                                    x-transition:leave-end="opacity-0"
-                                    x-cloak
-                                >
-                                    <li>
-                                        <a class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight" href="documentation.html" @focus="open = true" @focusout="open = false">Documentation</a>
-                                    </li>
-                                    <li>
-                                        <a class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight" href="support.html" @focus="open = true" @focusout="open = false">Support center</a>
-                                    </li>
-                                    <li>
-                                        <a class="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight" href="404.html" @focus="open = true" @focusout="open = false">404</a>
-                                    </li>
-                                </ul>
+                                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                                    href="blog.html">Blog</a>
                             </li>
                         </ul>
-
-                        <!-- Desktop sign in links -->
-                        <ul class="flex grow justify-end flex-wrap items-center">
-                            <li>
-                                <a class="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out" href="signin.html">Sign in</a>
-                            </li>
-                            <li>
-                                <a class="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3" href="signup.html">
-                                    <span>Sign up</span>
-                                    <svg class="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill-rule="nonzero" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
                     </nav>
-                    
+
                     <!-- Mobile menu -->
                     <div class="flex md:hidden" x-data="{ expanded: false }">
-
                         <!-- Hamburger button -->
-                        <button
-                            class="hamburger"
-                            :class="{ 'active': expanded }"
-                            @click.stop="expanded = !expanded"
-                            aria-controls="mobile-nav"
-                            :aria-expanded="expanded"
-                        >
+                        <button class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded"
+                            aria-controls="mobile-nav" :aria-expanded="expanded">
                             <span class="sr-only">Menu</span>
-                            <svg class="w-6 h-6 fill-current text-gray-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-6 h-6 fill-current text-gray-900" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <rect y="4" width="24" height="2" />
                                 <rect y="11" width="24" height="2" />
                                 <rect y="18" width="24" height="2" />
@@ -136,57 +66,21 @@
                         </button>
 
                         <!-- Mobile navigation -->
-                        <nav
-                            id="mobile-nav"
+                        <nav id="mobile-nav"
                             class="absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white"
-                            @click.outside="expanded = false"
-                            @keydown.escape.window="expanded = false"
-                            x-show="expanded"
-                            x-transition:enter="transition ease-out duration-200 transform"
+                            @click.outside="expanded = false" @keydown.escape.window="expanded = false"
+                            x-show="expanded" x-transition:enter="transition ease-out duration-200 transform"
                             x-transition:enter-start="opacity-0 -translate-y-2"
                             x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-out duration-200"
-                            x-transition:leave-start="opacity-100"
-                            x-transition:leave-end="opacity-0"                    
-                            x-cloak
-                        >
+                            x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0" x-cloak>
                             <ul class="px-5 py-2">
                                 <li>
-                                    <a class="flex text-gray-600 hover:text-gray-900 py-2" href="pricing.html">Pricing</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-gray-600 hover:text-gray-900 py-2" href="about.html">About us</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-gray-600 hover:text-gray-900 py-2" href="tutorials.html">Tutorials</a>
+                                    <a class="flex text-gray-600 hover:text-gray-900 py-2" href="about.html">About
+                                        us</a>
                                 </li>
                                 <li>
                                     <a class="flex text-gray-600 hover:text-gray-900 py-2" href="blog.html">Blog</a>
-                                </li>
-                                <li class="py-2 my-2 border-t border-b border-gray-200">
-                                    <span class="flex text-gray-600 hover:text-gray-900 py-2">Resources</span>
-                                    <ul class="pl-4">
-                                        <li>
-                                            <a class="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" href="documentation.html">Documentation</a>
-                                        </li>
-                                        <li>
-                                            <a class="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" href="support.html">Support center</a>
-                                        </li>
-                                        <li>
-                                            <a class="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" href="404.html">404</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" href="signin.html">Sign in</a>
-                                </li>
-                                <li>
-                                    <a class="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2" href="signup.html">
-                                        <span>Sign up</span>
-                                        <svg class="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill="#999" fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
                                 </li>
                             </ul>
                         </nav>
@@ -199,74 +93,68 @@
 
         <!-- Page content -->
         <main class="grow">
-            
             <!-- Blog post -->
             <section>
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="pt-32 pb-12 md:pt-40 md:pb-20">
                         <div class="max-w-3xl mx-auto lg:max-w-none">
-
                             <article>
-
                                 <!-- Article header -->
                                 <header class="max-w-3xl mx-auto mb-20">
                                     <!-- Title -->
                                     <h1 class="h1 text-center mb-4">Why we think Simple is good for developers</h1>
                                 </header>
-
                                 <!-- Article content -->
                                 <div class="lg:flex lg:justify-between" data-sticky-container>
-
                                     <!-- Sidebar -->
                                     <aside class="relative hidden lg:block w-64 mr-20 shrink-0">
                                         <div data-sticky data-margin-top="100" data-sticky-for="768" data-sticky-wrap>
-                                            <h4 class="text-lg font-bold leading-snug tracking-tight mb-4">Table of contents</h4>
+                                            <h4 class="text-lg font-bold leading-snug tracking-tight mb-4">Table of
+                                                contents</h4>
                                             <ul class="font-medium -my-1">
                                                 <li class="py-1">
                                                     <a class="flex items-center hover:underline" href="#introduction">
-                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0"
+                                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
                                                         </svg>
                                                         <span>Introduction</span>
                                                     </a>
                                                 </li>
                                                 <li class="py-1">
                                                     <a class="flex items-center hover:underline" href="#general">
-                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0"
+                                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
                                                         </svg>
                                                         <span>General content</span>
                                                     </a>
                                                 </li>
                                                 <li class="py-1">
-                                                    <a class="flex items-center hover:underline" href="#additional">
-                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                                                    <a class="flex items-center hover:underline" href="#source">
+                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0"
+                                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
                                                         </svg>
-                                                        <span>Additional reading</span>
-                                                    </a>
-                                                </li>
-                                                <li class="py-1">
-                                                    <a class="flex items-center hover:underline" href="#conclusion">
-                                                        <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                                        </svg>
-                                                        <span>Conclusion</span>
+                                                        <span>Source</span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </aside>
-
                                     <!-- Main content -->
                                     <div>
-
                                         <!-- Article meta -->
                                         <div class="flex items-center mb-6">
                                             <div class="flex shrink-0 mr-3">
                                                 <a class="relative" href="#0">
-                                                    <span class="absolute inset-0 -m-px" aria-hidden="true"><span class="absolute inset-0 -m-px bg-white rounded-full"></span></span>
-                                                    <img class="relative rounded-full" src="./images/news-author-04.jpg" width="32" height="32" alt="Author 04" />
+                                                    <span class="absolute inset-0 -m-px" aria-hidden="true"><span
+                                                            class="absolute inset-0 -m-px bg-white rounded-full"></span></span>
+                                                    <img class="relative rounded-full" src="./images/news-author-04.jpg"
+                                                        width="32" height="32" alt="Author 04" />
                                                 </a>
                                             </div>
                                             <div>
@@ -280,85 +168,163 @@
                                         <!-- Article body -->
                                         <div class="text-lg text-gray-600">
                                             <p id="introduction" class="mb-8" style="scroll-margin-top: 100px;">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet <a class="text-gray-900 underline" href="#0">how to manage anything</a> malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem <strong class="font-medium text-gray-900">et tortor consequat</strong>. Pellentesque adipiscing commodo elit at imperdiet. Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. <strong class="font-medium text-gray-900">Varius sit amet mattis vulputate enim</strong> nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed. Elit sed vulputate mi sit amet mauris commodo quis imperdiet.
+                                                Apakah kalian tahu apa itu lingkungan hidup? Lingkungan hidup itu adalah
+                                                kesatuan ruang yang ada di sekitar manusia dan mempunyai hubungan saling
+                                                timbal balik.
                                             </p>
                                             <p class="mb-8">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                Apa aja sih komponen lingkungan hidup? Komponen lingkungan hidup terdiri
+                                                dari 2 jenis, yaitu:
                                             </p>
+                                            <ol class="list-disc list-inside mb-8">
+                                                <li class="mb-1">
+                                                    Komponen biotik, yaitu
+                                                    makhluk hidup seperti hewan, tumbuhan, dan
+                                                    manusia.
+                                                </li>
+                                                <li class="mb-1">
+                                                    Komponen abiotik yaitu benda-benda mati, seperti air, tanah, batu,
+                                                    udara, dan cahaya matahari.
+                                                </li>
+                                            </ol>
+                                            <p class="mb-8">
+                                                Semua komponen ini membentuk ekosistem yang menampung, mempengaruhi dan
+                                                membentuk kesimbangan keseimbangan, stabilitas, dan produktivitas
+                                                lingkungan hidup. Karena ekosistem adalah pusat segala aktivitas yang
+                                                menyediakan sumber makanan dan kebutuhan lain bagi makhluk hidup maka
+                                                keseimbangan komponen di dalamnya harus dijaga dan dilestarikan dengan
+                                                baik.
+                                            </p>
+                                            <p class="mb-8">
+                                                Lalu, untuk jenis lingkungan dapat digolongkan atas 3 jenis golongan,
+                                                yaitu:
+                                            </p>
+                                            <ol class="list-disc list-inside mb-8">
+                                                <li class="mb-1">
+                                                    Lingkungan fisik: segala sesuatu yang ada di sekitar kita yang
+                                                    berbentuk benda mati seperti rumah, kendaraan, gunung, udara, sinar
+                                                    matahari serta lain-lain yang semacamnya.
+                                                </li>
+                                                <li class="mb-1">
+                                                    Lingkungan biologis: segala sesuatu yang berada di sekitar manusia
+                                                    yang berupa organisme hidup lainnya selain dari manusia sendiri,
+                                                    binatang, tumbuh-tumbuhan, jasad renik serta lain-lain.
+                                                </li>
+                                                <li class="mb-1">
+                                                    Lingkungan sosial: manusia lain yang berada di sekitarnya seperti
+                                                    orang sebelah, teman serta lain-lain.
+                                                </li>
+                                            </ol>
                                             <figure class="mb-8">
-                                                <img class="w-full rounded" src="./images/news-single.jpg" width="768" height="432" alt="Blog single" />
+                                                <img class="w-full rounded" src="./images/news-single.jpg" width="768"
+                                                    height="432" alt="Blog single" />
                                             </figure>
-                                            <h3 id="general" class="h3 text-gray-900 mb-4" style="scroll-margin-top: 100px;">General content</h3>
+                                            <h3 id="general" class="h3 text-gray-900 mb-4"
+                                                style="scroll-margin-top: 100px;">General content</h3>
                                             <p class="mb-8">
-                                                Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat auctor urna nunc id cursus metus aliquam eleifend, arcu dictum varius duis at consectetur lorem donec massa sapien, sed risus ultricies tristique nulla aliquet. Morbi tristique senectus et netus et, nibh nisl condimentum id venenatis a condimentum vitae sapien.
+                                                Nah, sekarang kita akan membahas masalah lingkungan hidup yang ada di
+                                                Indonesia, ya…
                                             </p>
                                             <p class="mb-8">
-                                                Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat auctor urna nunc id cursus metus aliquam eleifend:
+                                                Masalah Lingkungan hidup di Indonesia saat ini adalah penebangan hutan
+                                                secara liar/penggundulan hutan, polusi air dari
+                                                limbah industri dan pertambangan, polusi udara di daerah perkotaan ,
+                                                asap dan kabut dari kebakaran hutan; kebakaran
+                                                hutan permanen/tidak dapat dipadamkan; perambahan suaka alam/suaka
+                                                margasatwa; perburuan liar, perdagangan dan
+                                                pembasmian hewan liar yang dilindungi; penghancuran terumbu karang;
+                                                pembuangan sampah dari negara maju, pembuangan
+                                                sampah tanpa pemisahan/pengolahan.
+                                            </p>
+                                            <p class="mb-8">
+                                                Sebagai masyarakat Indonesia, sudah seharusnya kita melakukan
+                                                pelestarian dan merawat lingkungan hidup untuk kenyamanan
+                                                bersama. Upaya pelestarian lingkungan hidup yang bisa diterapkan di
+                                                kehidupan sehari-hari:
                                             </p>
                                             <ul class="list-disc list-inside mb-8">
-                                                <li class="mb-1"><strong class="font-medium text-gray-900">E-commerce</strong>: Better lorem ipsum generator.</li>
-                                                <li class="mb-1"><strong class="font-medium text-gray-900">Booking</strong>: Lorem ipsum post generator.</li>
-                                                <li class="mb-1"><strong class="font-medium text-gray-900">Retail</strong>: Generic dummy blog post generator.</li>
-                                                <li class="mb-1"><strong class="font-medium text-gray-900">On-demand services</strong>: Lorem ipsum generator shortcode.</li>
+                                                <li class="mb-1">
+                                                    Melakukan reboisasi guna menjaga keseimbangan alam dan kelangsungan
+                                                    hidup manusia
+                                                    Membiasakan diri untuk memelihara kebersihan di lingkungan sekitar
+                                                    kita
+                                                </li>
+                                                <li class="mb-1">
+                                                    Tidak melakukan penebangan liar karena hutan mempunyai peranan
+                                                    penting bagi
+                                                    kehidupan manusia karena hutan menghasilkan
+                                                    oksigen dan sumber daya alam yang melimpah
+                                                </li>
+                                                <li class="mb-1">
+                                                    Melakukan eksploitasi dan pemanfaatan sumber daya alam dengan bijak
+                                                    agar
+                                                    tidak merusak ekosistem lingkungan
+                                                </li>
                                             </ul>
                                             <p class="mb-8">
-                                                Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat auctor urna nunc id cursus metus aliquam eleifend:
+                                                Selain itu upaya pelestarian lingkungan hidup juga tercatat dalam SDG
+                                                nomor 14 Ekosistem Laut dengan tujuan “Melestarikan dan Memanfaatkan
+                                                Secara Berkelanjutan Sumber Daya Kelautan dan Samudra untuk Pembangunan
+                                                Berkelanjutan” dengan target:
                                             </p>
-                                            <p class="mb-8">
-                                                <a class="inline-flex items-center text-base text-blue-600 font-medium hover:underline" href="#0">
-                                                    <span>Read Simple on-demand services</span>
-                                                    <svg class="w-3 h-3 fill-current text-blue-400 shrink-0 ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" />
-                                                    </svg>
-                                                </a>
-                                            </p>
-                                            <p class="mb-8">
-                                                Aenean sed adipiscing <em class="italic">diam donec adipiscing tristique risus nec feugiat</em> auctor urna nunc id cursus metus aliquam eleifend, arcu dictum varius duis at consectetur lorem donec massa sapien, sed risus ultricies tristique nulla aliquet.
-                                            </p>
-                                            <h4 class="h4 text-gray-900 mb-4">Why support for Business is important</h4>
-                                            <p class="mb-8">
-                                                Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat auctor urna nunc id cursus metus aliquam eleifend.
-                                            </p>
-                                            <blockquote class="italic text-gray-900 font-medium mb-8">
-                                                “ Mi in nulla posuere sollicitudin. Porttitor eget dolor morbi non arcu risus quis varius quam. Pharetra vel turpis nunc eget lorem dolor sed viverra. Semper auctor neque vitae tempus quam pellentesque nec. “
-                                            </blockquote>
-                                            <p class="mb-8">
-                                                Et leo duis ut diam quam nulla porttitor porttitor lacus luctus accumsan tortor, lorem dolor sed viverra ipsum nunc aliquet bibendum enim eu augue ut lectus arcu bibendum at. Non sodales neque sodales ut etiam sit. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam.
-                                            </p>
-                                            <p class="p-4 bg-gray-100 border border-gray-300 rounded mb-8">
-                                                <a class="text-gray-900 underline" href="#0">Simple</a> is a sed viverra ipsum nunc aliquet bibendum enim eu augue ut lectus arcu bibendum at. Non sodales neque sodales ut etiam sit. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Learn more <a class="text-gray-900 underline" href="#0">here</a>.
-                                            </p>
-                                            <h3 id="additional" class="h3 text-gray-900 mb-4" style="scroll-margin-top: 100px;">Additional reading</h3>
-                                            <p class="mb-8">Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat auctor urna nunc id cursus metus aliquam eleifend:</p>
-                                            <p class="mb-8"><strong class="font-medium text-gray-900">Mi in nulla posuere sollicitudin:</strong></p>
                                             <ul class="list-disc list-inside mb-8">
                                                 <li class="mb-1">
-                                                    <a class="text-gray-900 underline" href="#0">E-commerce for etter lorem ipsum generator</a>
+                                                    14.1 Pada tahun 2025, mencegah dan secara signifikan mengurangi
+                                                    semua jenis pencemaran laut, khususnya dari kegiatan berbasis lahan,
+                                                    termasuk sampah laut dan polusi nutrisi
                                                 </li>
                                                 <li class="mb-1">
-                                                    <a class="text-gray-900 underline" href="#0">Booking for lorem ipsum post generator</a>
+                                                    14.3 Meminimalisasi dan mengatasi dampak pengasaman laut, termasuk
+                                                    melalui kerjasama ilmiah yang lebih baik di semua tingkatan.
                                                 </li>
                                                 <li class="mb-1">
-                                                    <a class="text-gray-900 underline" href="#0">Retail for generic dummy blog post generator</a>
-                                                </li>
-                                                <li class="mb-1">
-                                                    <a class="text-gray-900 underline" href="#0">On-demand services: Lorem ipsum generator shortcode</a>
+                                                    14.5 Pada tahun 2020, melestarikan setidaknya 10 persen dari wilayah
+                                                    pesisir dan laut, konsisten dengan hukum nasional dan internasional
+                                                    dan berdasarkan informasi ilmiah terbaik yang tersedia.
                                                 </li>
                                             </ul>
-                                            <h3 id="conclusion" class="h3 text-gray-900 mb-4" style="scroll-margin-top: 100px;">Conclusion</h3>
-                                            <p>
-                                                Sollicitudin ac orci phasellus egestas tellus rutrum telluse nim ut tellus elementum sagittis vitae et leo duis egestas purus viverra accumsan in nisl nisi scelerisquep ellentesque habitant morbi tristique, senectus et netus et dolor purus non enim praesent elementum facilisis leol, aoreet suspendisse interdum consectetur libero id faucibus.
+                                            <p class="mb-8">
+                                                SDG nomor 15 Ekosistem Darat dengan tujuan “Melindungi, Merestorasi dan
+                                                Meningkatkan Pemanfaatan Berkelanjutan Ekosistem
+                                                Daratan, Mengelola Hutan Secara Lestari, Menghentikan Penggurunan,
+                                                Memulihkan Degradasi lahan, serta Menghentikan
+                                                Kehilangan Keanekaragaman Hayat” dengan target:
                                             </p>
-
+                                            <ul class="list-disc list-inside mb-8">
+                                                <li class="mb-1">
+                                                    15.4 Pada tahun 2030, menjamin pelestarian ekosistem pegunungan,
+                                                    termasuk keanekaragaman hayatinya, untuk meningkatkan
+                                                    kapasitasnya memberikan manfaat yang sangat penting bagi pembangunan
+                                                    berkelanjutan
+                                                </li>
+                                                <li class="mb-1">
+                                                    15.5 Melakukan tindakan cepat dan signifikan untuk mengurangi
+                                                    degradasi habitat alami, menghentikan kehilangan
+                                                    keanekaragaman hayati, dan, pada tahun 2020, melindungi dan mencegah
+                                                    lenyapnya spesies yang terancam punah
+                                                </li>
+                                            </ul>
+                                            <h3 id="source" class="h3 text-gray-900 mb-4"
+                                                style="scroll-margin-top: 100px;">Source</h3>
+                                            <li class="mb-1">https://id.wikipedia.org/wiki/Lingkungan_alami</li>
+                                            <li class="mb-1">
+                                                https://dprkplh.tanahlautkab.go.id/?q=article/definisi-lingkungan-hidup-indonesia
+                                            </li>
+                                            <li class="mb-1">
+                                                https://ditsmp.kemdikbud.go.id/menjaga-lingkungan-hidup-dengan-melakukan-enam-langkah-pelestarian/
+                                            </li>
+                                            <li class="mb-1">
+                                                https://disperkimta.bulelengkab.go.id/informasi/detail/artikel/lingkungan-hidup-perlu-kita-lestarikan-21
+                                            </li>
+                                            <li class="mb-1">https://sdgs.bappenas.go.id/tujuan-14</li>
                                             <div>
-                                                <hr class="w-full h-px pt-px mt-8 bg-gray-200 border-0" />
-                                                <div class="mt-8">
-                                                    Interested in more tips like this? Check out <a class="text-gray-900 underline" href="#0">Introducing the Testing Field Guide</a>.
-                                                </div>
                                                 <div class="mt-6">
-                                                    <a class="inline-flex items-center text-base text-blue-600 font-medium hover:underline" href="blog.html">
-                                                        <svg class="w-3 h-3 fill-current text-blue-400 shrink-0 mr-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M.293 5.282L5 .5l1.414 1.436-3 3.048H12v2.032H3.414l3 3.048L5 11.5.293 6.718a1.027 1.027 0 010-1.436z" />
+                                                    <a class="inline-flex items-center text-base text-blue-600 font-medium hover:underline"
+                                                        href="blog.html">
+                                                        <svg class="w-3 h-3 fill-current text-blue-400 shrink-0 mr-2"
+                                                            viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M.293 5.282L5 .5l1.414 1.436-3 3.048H12v2.032H3.414l3 3.048L5 11.5.293 6.718a1.027 1.027 0 010-1.436z" />
                                                         </svg>
                                                         <span>Back to the blog</span>
                                                     </a>
@@ -395,7 +361,8 @@
                             <a class="inline-block" href="index.html" aria-label="Cruip">
                                 <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                     <defs>
-                                        <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="footer-logo">
+                                        <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%"
+                                            id="footer-logo">
                                             <stop stop-color="#4FD1C5" offset="0%" />
                                             <stop stop-color="#81E6D9" offset="25.871%" />
                                             <stop stop-color="#338CF5" offset="100%" />
@@ -406,30 +373,11 @@
                             </a>
                         </div>
                         <div class="text-sm text-gray-600">
-                            <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Terms</a> · <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Privacy Policy</a>
+                            <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                                href="#0">Terms</a> · <a
+                                class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                                href="#0">Privacy Policy</a>
                         </div>
-                    </div>
-
-                    <!-- 2nd block -->
-                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h6 class="text-gray-800 font-medium mb-2">Products</h6>
-                        <ul class="text-sm">
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Web Studio</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">DynamicBox Flex</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Programming Forms</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Integrations</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Command-line</a>
-                            </li>
-                        </ul>
                     </div>
 
                     <!-- 3rd block -->
@@ -437,19 +385,8 @@
                         <h6 class="text-gray-800 font-medium mb-2">Resources</h6>
                         <ul class="text-sm">
                             <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Documentation</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Tutorials & Guides</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Blog</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Support Center</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Partners</a>
+                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                                    href="#0">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -459,19 +396,8 @@
                         <h6 class="text-gray-800 font-medium mb-2">Company</h6>
                         <ul class="text-sm">
                             <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Home</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">About us</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Company values</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Pricing</a>
-                            </li>
-                            <li class="mb-2">
-                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out" href="#0">Privacy Policy</a>
+                                <a class="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                                    href="#0">About us</a>
                             </li>
                         </ul>
                     </div>
@@ -479,17 +405,24 @@
                     <!-- 5th block -->
                     <div class="sm:col-span-6 md:col-span-3 lg:col-span-3">
                         <h6 class="text-gray-800 font-medium mb-2">Subscribe</h6>
-                        <p class="text-sm text-gray-600 mb-4">Get the latest news and articles to your inbox every month.</p>
+                        <p class="text-sm text-gray-600 mb-4">Get the latest news and articles to your inbox every
+                            month.</p>
                         <form>
                             <div class="flex flex-wrap mb-4">
                                 <div class="w-full">
                                     <label class="block text-sm sr-only" for="newsletter">Email</label>
                                     <div class="relative flex items-center max-w-xs">
-                                        <input id="newsletter" type="email" class="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm" placeholder="Your email" required />
+                                        <input id="newsletter" type="email"
+                                            class="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm"
+                                            placeholder="Your email" required />
                                         <button type="submit" class="absolute inset-0 left-auto" aria-label="Subscribe">
-                                            <span class="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300" aria-hidden="true"></span>
-                                            <svg class="w-3 h-3 fill-current text-blue-600 mx-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill-rule="nonzero" />
+                                            <span class="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300"
+                                                aria-hidden="true"></span>
+                                            <svg class="w-3 h-3 fill-current text-blue-600 mx-3 shrink-0"
+                                                viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                                                    fill-rule="nonzero" />
                                             </svg>
                                         </button>
                                     </div>
@@ -508,23 +441,32 @@
                     <!-- Social links -->
                     <ul class="flex mb-4 md:order-1 md:ml-4 md:mb-0">
                         <li>
-                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" href="#0" aria-label="Twitter">
-                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 11.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" />
+                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                                href="#0" aria-label="Twitter">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" />
                                 </svg>
                             </a>
                         </li>
                         <li class="ml-4">
-                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" href="#0" aria-label="Github">
-                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                                href="#0" aria-label="Github">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
                                 </svg>
                             </a>
                         </li>
                         <li class="ml-4">
-                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" href="#0" aria-label="Facebook">
-                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z" />
+                            <a class="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                                href="#0" aria-label="Facebook">
+                                <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z" />
                                 </svg>
                             </a>
                         </li>
