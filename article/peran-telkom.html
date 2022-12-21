@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Peran Telkom — Greenpeace</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="../css/vendors/aos.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-white text-gray-900 tracking-tight">
+  <div class="flex flex-col min-h-screen overflow-hidden">
+    <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out" x-data="{ top: true }"
+      @scroll.window="top = window.pageYOffset > 10 ? false : true"
+      :class="{ 'bg-white backdrop-blur-sm shadow-lg' : !top }">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6">
+        <div class="flex items-center justify-between h-16 md:h-20">
+          <div class="shrink-0 mr-4">
+            <a class="block" href="../index.html" aria-label="Cruip">
+              <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="header-logo">
+                    <stop stop-color="#4FD1C5" offset="0%" />
+                    <stop stop-color="#81E6D9" offset="25.871%" />
+                    <stop stop-color="#338CF5" offset="100%" />
+                  </radialGradient>
+                </defs>
+                <rect width="32" height="32" rx="16" fill="url(#header-logo)" fill-rule="nonzero" />
+              </svg>
+            </a>
+          </div>
+
+          <nav class="hidden md:flex md:grow">
+            <ul class="flex grow justify-end flex-wrap items-center">
+              <li>
+                <a class="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  href="../about.html">About</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="flex md:hidden" x-data="{ expanded: false }">
+            <button class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded"
+              aria-controls="mobile-nav" :aria-expanded="expanded">
+              <span class="sr-only">Menu</span>
+              <svg class="w-6 h-6 fill-current text-gray-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect y="4" width="24" height="2" />
+                <rect y="11" width="24" height="2" />
+                <rect y="18" width="24" height="2" />
+              </svg>
+            </button>
+
+            <nav id="mobile-nav" class="absolute top-full h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white"
+              @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-show="expanded"
+              x-transition:enter="transition ease-out duration-200 transform"
+              x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0" x-cloak>
+              <ul class="px-5 py-2">
+                <li>
+                  <a class="flex text-gray-600 hover:text-gray-900 py-2" href="../about.html">About</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grow">
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="pt-32 pb-12 md:pt-40 md:pb-20">
+            <div class="max-w-3xl mx-auto lg:max-w-none">
+              <article>
+                <header class="max-w-3xl mx-auto mb-20">
+                  <h1 class="h1 text-center mb-4">Peran Telkom Mendorong Pemulihan Lingkungan Hidup</h1>
+                </header>
+                <div class="lg:flex lg:justify-between" data-sticky-container>
+                  <aside class="relative hidden lg:block w-64 mr-20 shrink-0">
+                    <div data-sticky data-margin-top="100" data-sticky-for="768" data-sticky-wrap>
+                      <h4 class="text-lg font-bold leading-snug tracking-tight mb-4">Table of
+                        contents</h4>
+                      <ul class="font-medium -my-1">
+                        <li class="py-1">
+                          <a class="flex items-center hover:underline" href="#introduction">
+                            <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                            </svg>
+                            <span>Introduction</span>
+                          </a>
+                        </li>
+                        <li class="py-1">
+                          <a class="flex items-center hover:underline" href="#general">
+                            <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                            </svg>
+                            <span>General content</span>
+                          </a>
+                        </li>
+                        <li class="py-1">
+                          <a class="flex items-center hover:underline" href="#source">
+                            <svg class="w-4 h-4 fill-current text-gray-400 mr-3 shrink-0" viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
+                            </svg>
+                            <span>Source</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+
+                  <div>
+                    <div class="flex items-center mb-6">
+                      <div class="flex shrink-0 mr-3">
+                        <a class="relative" href="#0">
+                          <span class="absolute inset-0 -m-px" aria-hidden="true"><span
+                              class="absolute inset-0 -m-px bg-white rounded-full"></span></span>
+                          <img class="relative rounded-full" src="./images/news-author-04.jpg" width="32" height="32"
+                            alt="Author 04" />
+                        </a>
+                      </div>
+                      <div>
+                        <span class="text-gray-600">By </span>
+                        <a class="font-medium hover:underline" href="#0">Victor Austin</a>
+                        <span class="text-gray-600"> · 16 December, 2022</span>
+                      </div>
+                    </div>
+                    <hr class="w-16 h-px pt-px bg-gray-200 border-0 mb-6" />
+                    <div class="text-lg text-gray-600">
+                      <p id="introduction" class="mb-8" style="scroll-margin-top: 100px;">
+                        Di sepanjang 2022, PT Telkom Indonesia sudah melaksanakan tiga program yang berdampak terhadap
+                        pemulihan lingkungan hidup dan penanggulangan perubahan iklim., yaitu Konservasi Hutan Binaan
+                        Digital, Penanaman Mangrove, dan Electronic Device Donation for Education. Melalui ketiga
+                        program ini, Telkom terus fokus untuk mencapai tujuan berkelanjutan yang juga sejalan pada SDG
+                        terkait penanganan perubahan Iklim dengan melibatkan banyak karyawan dan keluarga besar Telkom
+                        untuk membantu mensukseskan program ini.
+                      </p>
+                      <figure class="mb-8">
+                        <img class="w-full rounded" src="./images/news-single.jpg" width="768" height="432"
+                          alt="Blog single" />
+                      </figure>
+                      <h3 id="general" class="h3 text-gray-900 mb-4" style="scroll-margin-top: 100px;">General content
+                      </h3>
+                      <p class="mb-8">
+                        Program Konservasi Hutan Binaan Digital berupaya merestorasi dan konservasi hutan pada lahan
+                        kritis di Indonesia seluas 14 juta hektar. Program ini bertujuan untuk mengembalikan fungsi alam
+                        sebagai media perlindungan banjir, memulihkan dinamika populasi, dan ekosistem keanekaragaman
+                        hayati.
+                      </p>
+                      <p class="mb-8">
+                        Pada program Penanaman Mangrove, sebanyak lebih dari 30.000 bibit telah berhasil ditanamkan di
+                        Semarang, Karimunjawa, Cirebon, Banten, dan Magelang.Dengan target konservasi seluas empat
+                        hektar, program penanaman Mangrove juga bertujuan untuk menjaga ekosistem terumbu karang.
+                      </p>
+                      <p class="mb-8">
+                        Untuk program ketiga Electronic Device Donation for Education, Telkom menjalankan program
+                        penyaluran sampah elektronik yang akan dipilih dan diperbaiki oleh siswa SMK Telkom agar dapat
+                        digunakan kembali menjadi media pembelajaran digital oleh siswa yang membutuhkan. Selama tahun
+                        2022, sebanyak 192 dari 200 perangkat yang terdiri dari 71 smartphone, 18 laptop, 14 tablet, dan
+                        97 uncategorized devices telah diperbaiki dan akan dikirimkan kepada penerima manfaat di wilayah
+                        operasional Telkom dan daerah 3T.
+                      </p>
+                      <h3 id="source" class="h3 text-gray-900 mb-4" style="scroll-margin-top: 100px;">Source</h3>
+                      <ul class="list-disc list-inside mb-8">
+                        <li class="mb-1">
+                          https://katadata.co.id/anshar/info/639869b51e6f0/telkom-ambil-peran-untuk-dorong-pemulihan-lingkungan-hidup
+                        </li>
+                      </ul>
+                      <div>
+                        <div class="mt-6">
+                          <a class="inline-flex items-center text-base text-blue-600 font-medium hover:underline"
+                            href="../index.html">
+                            <svg class="w-3 h-3 fill-current text-blue-400 shrink-0 mr-2" viewBox="0 0 12 12"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M.293 5.282L5 .5l1.414 1.436-3 3.048H12v2.032H3.414l3 3.048L5 11.5.293 6.718a1.027 1.027 0 010-1.436z" />
+                            </svg>
+                            <span>Back to the blog</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
+          <div class="text-sm text-gray-600 mr-4">&copy; Greenpeace. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/vendors/alpinejs.min.js" defer></script>
+  <script src="../js/vendors/aos.js"></script>
+  <script src="../js/vendors/sticky.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
